@@ -1,0 +1,37 @@
+/* Enhanced 3D Grid Animations */
+@keyframes grid-3d {
+  0% {
+    transform: translate3d(-200%, 0, 0) rotateX(65deg) rotateY(5deg);
+  }
+  50% {
+    transform: translate3d(0%, 0, 0) rotateX(65deg) rotateY(0deg);
+  }
+  100% {
+    transform: translate3d(200%, 0, 0) rotateX(65deg) rotateY(-5deg);
+  }
+}
+
+@keyframes grid-3d-reverse {
+  0% {
+    transform: translate3d(200%, 0, 0) rotateX(75deg) rotateY(-3deg);
+  }
+  50% {
+    transform: translate3d(0%, 0, 0) rotateX(75deg) rotateY(0deg);
+  }
+  100% {
+    transform: translate3d(-200%, 0, 0) rotateX(75deg) rotateY(3deg);
+  }
+}
+
+.animate-grid-3d {
+  animation: grid-3d 25s ease-in-out infinite;
+}
+
+.animate-grid-3d-reverse {
+  animation: grid-3d-reverse 30s ease-in-out infinite;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
