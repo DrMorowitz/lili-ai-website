@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
+import AnimatedShaderBackground from "./animated-shader-background"
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -96,9 +97,11 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
     ref,
   ) => {
     return (
-      <div className={cn("relative", className)} ref={ref} {...props}>
+      <div className={cn("relative overflow-hidden", className)} ref={ref} {...props}>
+        {/* Add animated shader background */}
+        <AnimatedShaderBackground />
         <div className="absolute top-0 z-[0] h-screen w-screen bg-primary/5 dark:bg-primary/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,hsl(var(--primary)/0.15),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,hsl(var(--primary)/0.3),rgba(255,255,255,0))]" />
-        <section className="relative max-w-full mx-auto z-1">
+        <section className="relative max-w-full mx-auto z-10">
           <RetroGrid {...gridOptions} />
           <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
             <div className="space-y-5 max-w-3xl leading-0 lg:leading-5 mx-auto font-geist text-center">
