@@ -10,110 +10,185 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Lili AI Medical Professional Color Palette */
-    --background: 227 50% 94%;           /* #e3ebeb - Main site background */
-    --foreground: 248 49% 25%;           /* #31297f - Primary text (same as primary) */
-
-    --card: 0 0% 100%;                   /* White for cards */
-    --card-foreground: 248 49% 25%;      /* #31297f - Card text */
-
-    --popover: 0 0% 100%;                /* White for popovers */
-    --popover-foreground: 248 49% 25%;   /* #31297f - Popover text */
-
-    --primary: 248 49% 25%;              /* #31297f - Deep purple-blue (main brand) */
-    --primary-foreground: 0 0% 100%;     /* White text on primary */
-
-    --secondary: 195 79% 60%;            /* #44c4ec - Bright cyan (accents, highlights) */
-    --secondary-foreground: 0 0% 100%;   /* White text on secondary */
-
-    --tertiary: 193 60% 75%;             /* #96d9ec - Light cyan (card backgrounds) */
-    --tertiary-foreground: 248 49% 25%;  /* Primary text on tertiary */
-
-    --accent-purple: 243 29% 61%;        /* #8a89b4 - Medium purple (borders, icons) */
-    --accent-light: 245 30% 70%;         /* #a19ec2 - Light purple (subtle elements) */
-    --accent-dark: 249 31% 60%;          /* #847cae - Darker purple (secondary text) */
-
-    --surface: 247 22% 74%;              /* #bdbdd3 - Card surfaces, sections */
-    --muted: 242 21% 82%;                /* #cccfdc - Muted backgrounds, placeholders */
-    --muted-foreground: 249 31% 60%;     /* #847cae - Muted text */
-
-    --text-primary: 248 49% 25%;         /* #31297f - Primary text */
-    --text-secondary: 249 31% 60%;       /* #847cae - Secondary text */
-
-    --destructive: 0 84.2% 60.2%;        /* Red for errors */
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 242 21% 82%;               /* #cccfdc - Borders */
-    --input: 242 21% 82%;                /* #cccfdc - Input borders */
-    --ring: 195 79% 60%;                 /* #44c4ec - Focus rings */
-
+    /* Light Mode - Medical Professional Theme */
+    --background: 227 50% 94%;              /* #e3ebeb - Existing light blue-gray */
+    --foreground: 248 49% 25%;              /* #31297f - Existing deep purple-blue */
+    
+    --card: 0 0% 100%;                      /* Pure white for clean cards */
+    --card-foreground: 248 49% 25%;         /* Primary text on cards */
+    
+    --popover: 0 0% 100%;                   /* White popovers */
+    --popover-foreground: 248 49% 25%;      /* Primary text in popovers */
+    
+    --primary: 248 49% 25%;                 /* #31297f - Brand deep purple-blue */
+    --primary-foreground: 0 0% 100%;        /* White text on primary */
+    
+    --secondary: 195 79% 60%;               /* #44c4ec - Existing bright cyan */
+    --secondary-foreground: 0 0% 100%;      /* White text on secondary */
+    
+    --tertiary: 193 60% 75%;                /* #96d9ec - Light cyan for backgrounds */
+    --tertiary-foreground: 248 49% 25%;     /* Primary text on tertiary */
+    
+    --muted: 242 21% 82%;                   /* #cccfdc - Light gray for muted elements */
+    --muted-foreground: 249 31% 60%;        /* #847cae - Medium purple for muted text */
+    
+    --accent: 243 29% 61%;                  /* #8a89b4 - Medium purple for accents */
+    --accent-foreground: 0 0% 100%;         /* White text on accents */
+    
+    --destructive: 0 84% 60%;               /* Bright red for errors */
+    --destructive-foreground: 0 0% 100%;    /* White text on destructive */
+    
+    --border: 242 21% 82%;                  /* Light gray borders */
+    --input: 242 21% 82%;                   /* Matching input borders */
+    --ring: 195 79% 60%;                    /* Cyan focus rings */
+    
+    /* Chart colors - Medical/professional palette */
+    --chart-1: 248 49% 45%;                 /* Deep blue variant */
+    --chart-2: 195 79% 60%;                 /* Bright cyan */
+    --chart-3: 243 29% 61%;                 /* Medium purple */
+    --chart-4: 193 60% 75%;                 /* Light cyan */
+    --chart-5: 249 31% 60%;                 /* Muted purple */
+    
+    /* Sidebar - Professional light theme */
+    --sidebar: 227 50% 96%;                 /* Slightly lighter than background */
+    --sidebar-foreground: 248 49% 25%;      /* Primary text */
+    --sidebar-primary: 248 49% 25%;         /* Primary brand color */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text */
+    --sidebar-accent: 242 21% 88%;          /* Lighter muted for accents */
+    --sidebar-accent-foreground: 248 49% 25%; /* Primary text */
+    --sidebar-border: 242 21% 85%;          /* Subtle borders */
+    --sidebar-ring: 195 79% 60%;            /* Cyan focus ring */
+    
+    /* Typography - Geist font already configured */
+    --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Geist', Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
     --radius: 0.5rem;
+    
+    /* Enhanced shadows for medical/professional feel */
+    --shadow-2xs: 0 1px 2px 0px hsl(248 49% 25% / 0.03);
+    --shadow-xs: 0 1px 3px 0px hsl(248 49% 25% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(248 49% 25% / 0.08), 0 1px 2px -1px hsl(248 49% 25% / 0.08);
+    --shadow: 0 1px 3px 0px hsl(248 49% 25% / 0.10), 0 1px 2px -1px hsl(248 49% 25% / 0.10);
+    --shadow-md: 0 4px 6px -1px hsl(248 49% 25% / 0.08), 0 2px 4px -2px hsl(248 49% 25% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(248 49% 25% / 0.08), 0 4px 6px -4px hsl(248 49% 25% / 0.06);
+    --shadow-xl: 0 20px 25px -5px hsl(248 49% 25% / 0.08), 0 8px 10px -6px hsl(248 49% 25% / 0.06);
+    --shadow-2xl: 0 25px 50px -12px hsl(248 49% 25% / 0.20);
+    
+    /* Professional spacing */
+    --spacing: 0.25rem;
 
-    /* Custom gradients */
+    /* Custom gradients - keeping your existing ones */
     --gradient-primary: linear-gradient(135deg, hsl(248 49% 25%), hsl(243 29% 61%));
     --gradient-secondary: linear-gradient(135deg, hsl(195 79% 60%), hsl(193 60% 75%));
     --gradient-subtle: linear-gradient(180deg, hsl(227 50% 94%), hsl(242 21% 82%));
 
-    /* Custom shadows */
+    /* Custom shadows - keeping your existing ones plus new */
     --shadow-elegant: 0 10px 30px -10px hsl(248 49% 25% / 0.3);
     --shadow-glow: 0 0 40px hsl(195 79% 60% / 0.4);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Legacy color mappings for existing components */
+    --accent-purple: 243 29% 61%;        /* #8a89b4 - Medium purple (borders, icons) */
+    --accent-light: 245 30% 70%;         /* #a19ec2 - Light purple (subtle elements) */
+    --accent-dark: 249 31% 60%;          /* #847cae - Darker purple (secondary text) */
+    --surface: 247 22% 74%;              /* #bdbdd3 - Card surfaces, sections */
+    --text-primary: 248 49% 25%;         /* #31297f - Primary text */
+    --text-secondary: 249 31% 60%;       /* #847cae - Secondary text */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Professional medical theme */
+    --background: 248 49% 8%;               /* Very dark blue-purple */
+    --foreground: 227 50% 94%;              /* Light blue-gray text */
+    
+    --card: 248 49% 12%;                    /* Darker cards */
+    --card-foreground: 227 50% 94%;         /* Light text on cards */
+    
+    --popover: 248 49% 15%;                 /* Slightly lighter popovers */
+    --popover-foreground: 227 50% 94%;      /* Light text in popovers */
+    
+    --primary: 195 79% 60%;                 /* Bright cyan becomes primary in dark */
+    --primary-foreground: 248 49% 8%;       /* Dark text on bright primary */
+    
+    --secondary: 243 29% 61%;               /* Medium purple secondary */
+    --secondary-foreground: 0 0% 100%;      /* White text on secondary */
+    
+    --tertiary: 248 49% 18%;                /* Dark tertiary backgrounds */
+    --tertiary-foreground: 227 50% 94%;     /* Light text on tertiary */
+    
+    --muted: 248 49% 20%;                   /* Dark muted backgrounds */
+    --muted-foreground: 242 21% 65%;        /* Lighter muted text */
+    
+    --accent: 193 60% 75%;                  /* Light cyan accents in dark mode */
+    --accent-foreground: 248 49% 8%;        /* Dark text on light accents */
+    
+    --destructive: 0 84% 65%;               /* Brighter red for dark mode */
+    --destructive-foreground: 0 0% 100%;    /* White text on destructive */
+    
+    --border: 248 49% 25%;                  /* Subtle borders */
+    --input: 248 49% 25%;                   /* Matching input borders */
+    --ring: 195 79% 60%;                    /* Cyan focus rings */
+    
+    /* Chart colors - Adjusted for dark mode */
+    --chart-1: 195 79% 70%;                 /* Bright cyan */
+    --chart-2: 243 29% 71%;                 /* Light purple */
+    --chart-3: 193 60% 80%;                 /* Very light cyan */
+    --chart-4: 227 50% 75%;                 /* Light blue-gray */
+    --chart-5: 249 31% 70%;                 /* Light purple variant */
+    
+    /* Dark sidebar */
+    --sidebar: 248 49% 10%;                 /* Very dark sidebar */
+    --sidebar-foreground: 227 50% 90%;      /* Light sidebar text */
+    --sidebar-primary: 195 79% 60%;         /* Cyan primary */
+    --sidebar-primary-foreground: 248 49% 8%; /* Dark text on primary */
+    --sidebar-accent: 248 49% 18%;          /* Dark accent backgrounds */
+    --sidebar-accent-foreground: 227 50% 90%; /* Light accent text */
+    --sidebar-border: 248 49% 22%;          /* Subtle sidebar borders */
+    --sidebar-ring: 195 79% 60%;            /* Cyan focus ring */
+    
+    /* Typography remains the same */
+    --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Geist', Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+    --radius: 0.5rem;
+    
+    /* Dark mode shadows */
+    --shadow-2xs: 0 1px 2px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.12), 0 1px 2px -1px hsl(0 0% 0% / 0.12);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.15), 0 1px 2px -1px hsl(0 0% 0% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.12), 0 2px 4px -2px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.12), 0 4px 6px -4px hsl(0 0% 0% / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.12), 0 8px 10px -6px hsl(0 0% 0% / 0.08);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Professional spacing */
+    --spacing: 0.25rem;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Custom gradients - adjusted for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(195 79% 60%), hsl(243 29% 61%));
+    --gradient-secondary: linear-gradient(135deg, hsl(193 60% 75%), hsl(227 50% 75%));
+    --gradient-subtle: linear-gradient(180deg, hsl(248 49% 8%), hsl(248 49% 15%));
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Custom shadows - adjusted for dark mode */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(195 79% 60% / 0.3);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Legacy color mappings for dark mode */
+    --accent-purple: 243 29% 71%;        /* Lighter purple for dark mode */
+    --accent-light: 245 30% 80%;         /* Much lighter purple for dark mode */
+    --accent-dark: 249 31% 70%;          /* Light purple for contrast */
+    --surface: 248 49% 15%;              /* Dark surface */
+    --text-primary: 227 50% 94%;         /* Light primary text */
+    --text-secondary: 242 21% 75%;       /* Light secondary text */
   }
 }
 

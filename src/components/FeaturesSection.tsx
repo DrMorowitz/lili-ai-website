@@ -44,7 +44,7 @@ const FeaturesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-card rounded-xl p-8 font-geist text-center shadow-md hover:shadow-lg transition-all hover:scale-105"
+                className="bg-card rounded-xl p-8 font-geist text-center shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                   <IconComponent className="w-8 h-8 font-geist text-secondary-foreground" />

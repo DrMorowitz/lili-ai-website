@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,8 +43,9 @@ const Navigation = () => {
             </a>
           </div>
           
-          {/* Language Toggle & CTA */}
+          {/* Theme Toggle, Language Toggle & CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <div className="flex bg-surface rounded-lg p-1">
               <button 
                 onClick={() => setLanguage('es')}
